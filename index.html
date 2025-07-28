@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora León - Perfumes Árabes en Mar del Plata</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Indicador de Progreso -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Navegación por Secciones -->
+    <div class="section-nav">
+        <div class="section-nav-btn active" data-section="hero"></div>
+        <div class="section-nav-btn" data-section="products"></div>
+        <div class="section-nav-btn" data-section="pricing"></div>
+        <div class="section-nav-btn" data-section="about"></div>
+        <div class="section-nav-btn" data-section="revendedores"></div>
+        <div class="section-nav-btn" data-section="footer"></div>
+    </div>
+
+    <!-- Navegación Móvil -->
+    <nav class="mobile-nav">
+        <a href="#" class="mobile-logo">Distribuidora León</a>
+        <button class="mobile-menu-toggle">☰</button>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div class="mobile-menu">
+        <button class="mobile-menu-close">×</button>
+        <ul class="mobile-menu-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#pricing">Precios</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#revendedores">Revendedores</a></li>
+            <li><a href="https://wa.me/5492233456733" target="_blank">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay del Menú Móvil -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Hero Section Profesional -->
+    <header class="hero-section" id="hero">
+        <!-- Fondo Dinámico Profesional -->
+        <div class="hero-background"></div>
+        
+        <!-- Efectos Sutiles de Lujo -->
+        <div class="luxury-elements">
+            <div class="luxury-element">💎</div>
+            <div class="luxury-element">👑</div>
+            <div class="luxury-element">🏆</div>
+            <div class="luxury-element">⭐</div>
+        </div>
+        
+        <!-- Contenedor Principal -->
+        <div class="hero-container">
+            <!-- Columna de Texto -->
+            <div class="hero-text">
+                <div class="brand-logo">Distribuidora León</div>
+                <h1 class="hero-title">La Esencia de Arabia en Mar del Plata</h1>
+                <p class="hero-subtitle">Perfumes Árabes de Nicho • Calidad Insuperable • Precios Imbatibles</p>
+                <p class="hero-description">Descubre la magia de los perfumes árabes más exclusivos. Desde las mejores casas como Lattafa, Al Haramain, Rasasi y Afnan. Cada fragancia cuenta una historia de tradición y lujo oriental.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#productos" class="cta-button">Ver Catálogo Completo</a>
+                    <a href="https://wa.me/5492233456733?text=Hola! Me interesa conocer los perfumes árabes de Distribuidora León" class="cta-button secondary" target="_blank">Consultar por WhatsApp</a>
+                </div>
+            </div>
+            
+            <!-- Columna del Producto Estrella -->
+            <div class="hero-product">
+                <div class="product-showcase">
+                    <div class="product-glow"></div>
+                    <img src="./PERFUMES/PerfumeLattafaAsad-EauDeParfum-100ml_Hombre_2a917647-6766-4a2a-8fd8-27e50c8bcbaf-Photoroom.png" alt="Lattafa Asad - Nuestro Perfume Estrella" class="product-image">
+                </div>
+                
+                <div class="product-info">
+                    <h3 class="product-name">Lattafa Asad</h3>
+                    <p class="product-price">$37.990</p>
+                    <p class="product-description">El perfume más vendido de Arabia. Notas de bergamota, cardamomo, lavanda, vainilla y ámbar. Una fragancia que define el lujo oriental.</p>
+                    
+                    <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Asad por $37.990" class="cta-button" target="_blank">Comprar Ahora</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indicador de Scroll -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="products-section hidden">
+        <div class="section-reveal-left">
+            <div class="container">
+                <h2>Nuestras Joyas Más Deseadas</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="./PERFUMES/PerfumeLattafaAsad-EauDeParfum-100ml_Hombre_2a917647-6766-4a2a-8fd8-27e50c8bcbaf-Photoroom.png" alt="Lattafa Asad">
+                        <h3>Lattafa Asad</h3>
+                        <p>Notas de bergamota, cardamomo, lavanda, vainilla y ámbar</p>
+                        <p class="price">$37.990</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Asad por $37.990" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Rasasi Daarej-Photoroom.png" alt="Rasasi Daarej">
+                        <h3>Rasasi Daarej</h3>
+                        <p>Notas de rosa, jazmín, sándalo y almizcle</p>
+                        <p class="price">$42.500</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Rasasi Daarej por $42.500" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Afnan 9PM-Photoroom.png" alt="Afnan 9PM">
+                        <h3>Afnan 9PM</h3>
+                        <p>Notas de bergamota, pimienta, vainilla y ámbar</p>
+                        <p class="price">$38.750</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Afnan 9PM por $38.750" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/detou-noir-422c774714399d641d17140920119047-1024-1024-Photoroom.png" alt="Detour Noir">
+                        <h3>Detour Noir</h3>
+                        <p>Notas de bergamota, lavanda, vainilla y ámbar</p>
+                        <p class="price">$35.200</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Detour Noir por $35.200" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Lattafa Yara Rosa-Photoroom.png" alt="Lattafa Yara Rosa">
+                        <h3>Lattafa Yara Rosa</h3>
+                        <p>Fragancia femenina con notas florales y frutales</p>
+                        <p class="price">$35.990</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Yara Rosa por $35.990" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Lattafa Khamrah EDP-Photoroom.png" alt="Lattafa Khamrah EDP">
+                        <h3>Lattafa Khamrah EDP</h3>
+                        <p>Fragancia unisex con notas orientales y especiadas</p>
+                        <p class="price">$39.990</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Khamrah EDP por $39.990" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Lattafa Khamrah QAHWA.png" alt="Lattafa Khamrah QAHWA">
+                        <h3>Lattafa Khamrah QAHWA</h3>
+                        <p>Variante con notas de café y especias orientales</p>
+                        <p class="price">$38.990</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Khamrah QAHWA por $38.990" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Club de Nuit Intense Man.png" alt="Club de Nuit Intense Man">
+                        <h3>Club de Nuit Intense Man</h3>
+                        <p>Fragancia masculina con notas cítricas y amaderadas</p>
+                        <p class="price">$45.690</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Club de Nuit Intense Man por $45.690" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Bharara King EDP.png" alt="Bharara King EDP">
+                        <h3>Bharara King EDP</h3>
+                        <p>Fragancia masculina premium con notas reales</p>
+                        <p class="price">$86.990</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Bharara King EDP por $86.990" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Armaf Odyssey Mandarin Sky.png" alt="Armaf Odyssey Mandarin Sky">
+                        <h3>Armaf Odyssey Mandarin Sky</h3>
+                        <p>Fragancia fresca con notas cítricas y florales</p>
+                        <p class="price">$54.990</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Armaf Odyssey Mandarin Sky por $54.990" target="_blank">Consultar</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="./PERFUMES/Al Haramain Amber Oud Gold.png" alt="Al Haramain Amber Oud Gold">
+                        <h3>Al Haramain Amber Oud Gold</h3>
+                        <p>Fragancia premium con ámbar y oud auténtico</p>
+                        <p class="price">$84.990</p>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Al Haramain Amber Oud Gold por $84.990" target="_blank">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Precios -->
+    <section id="pricing" class="pricing-section hidden">
+        <div class="section-reveal-right">
+            <div class="container">
+                <h2>Invertí Inteligente: Lujo Real a Precio Justo</h2>
+                <p>Comparamos con <a href="https://esenciadevida3.mitiendanube.com/" target="_blank" style="color: var(--dorado-metalico);">Esencia de Vida</a> para que veas el ahorro real. Precios actualizados Enero 2025.</p>
+                
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Perfume</th>
+                            <th>Precio Esencia de Vida</th>
+                            <th>Nuestro Precio</th>
+                            <th>Ahorro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lattafa Asad</td>
+                            <td>$61.625</td>
+                            <td>$37.990</td>
+                            <td>$23.635</td>
+                        </tr>
+                        <tr>
+                            <td>Lattafa Khamrah EDP</td>
+                            <td>$93.500</td>
+                            <td>$39.990</td>
+                            <td>$53.510</td>
+                        </tr>
+                        <tr>
+                            <td>Lattafa Khamrah QAHWA</td>
+                            <td>$80.750</td>
+                            <td>$38.990</td>
+                            <td>$41.760</td>
+                        </tr>
+                        <tr>
+                            <td>Club de Nuit Intense Man</td>
+                            <td>$76.500</td>
+                            <td>$45.690</td>
+                            <td>$30.810</td>
+                        </tr>
+                        <tr>
+                            <td>Afnan 9PM</td>
+                            <td>$79.900</td>
+                            <td>$38.750</td>
+                            <td>$41.150</td>
+                        </tr>
+                        <tr>
+                            <td>Al Haramain Amber Oud Gold</td>
+                            <td>$151.300</td>
+                            <td>$84.990</td>
+                            <td>$66.310</td>
+                        </tr>
+                        <tr>
+                            <td>Bharara King EDP</td>
+                            <td>$204.850</td>
+                            <td>$86.990</td>
+                            <td>$117.860</td>
+                        </tr>
+                        <tr>
+                            <td>Lattafa Yara Rosa</td>
+                            <td>$55.250</td>
+                            <td>$35.990</td>
+                            <td>$19.260</td>
+                        </tr>
+                        <tr>
+                            <td>Rasasi Daarej</td>
+                            <td>$68.000</td>
+                            <td>$42.500</td>
+                            <td>$25.500</td>
+                        </tr>
+                        <tr>
+                            <td>Detour Noir</td>
+                            <td>$63.750</td>
+                            <td>$35.200</td>
+                            <td>$28.550</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pricing-summary">
+                    <h3>💡 ¿Por qué elegirnos?</h3>
+                    <ul>
+                        <li>✅ <strong>Ahorro promedio:</strong> $42.000 por perfume</li>
+                        <li>✅ <strong>Precios sin descuentos engañosos</strong></li>
+                        <li>✅ <strong>Calidad garantizada</strong> - Mismos productos, mejor precio</li>
+                        <li>✅ <strong>Envío gratis</strong> en compras mayores a $50.000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="about-section hidden">
+        <div class="section-reveal-left">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="./PERFUMES/perfumesco_coleccion.webp" alt="Sobre Nosotros">
+                    </div>
+                    <div class="about-text">
+                        <h2>Somos Distribuidora León</h2>
+                        <p>Con más de 5 años de experiencia en el mercado de perfumes árabes, nos hemos convertido en la referencia en Mar del Plata para los amantes de las fragancias orientales. Nuestro compromiso es ofrecer los mejores perfumes de las casas más prestigiosas de Arabia, garantizando autenticidad y calidad excepcional a precios accesibles.</p>
+                        <p>Contamos con una amplia red de proveedores directos que nos permite ofrecer precios competitivos sin comprometer la calidad. Cada perfume que vendemos es cuidadosamente seleccionado para asegurar que cumpla con los más altos estándares de la industria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Revendedores -->
+    <section id="revendedores" class="revendedores-section hidden">
+        <div class="section-reveal-right">
+            <div class="container">
+                <h2>Empeza tu Propio Emprendimiento</h2>
+                <div class="revendedores-grid">
+                    <div class="revendedor-card">
+                        <div class="revendedor-icon">💰</div>
+                        <h3>Ganancias Atractivas</h3>
+                        <p>Margen de ganancia del 25-35% en cada venta. Con nuestro catálogo premium, las ventas se multiplican.</p>
+                    </div>
+                    
+                    <div class="revendedor-card">
+                        <div class="revendedor-icon">🚀</div>
+                        <h3>Crecimiento Rápido</h3>
+                        <p>Acceso inmediato a productos de alta demanda. Sin stock inicial, sin inversión en inventario.</p>
+                    </div>
+                    
+                    <div class="revendedor-card">
+                        <div class="revendedor-icon">👥</div>
+                        <h3>Comunidad Activa</h3>
+                        <p>Únete a nuestra red de revendedores exitosos. Soporte continuo y estrategias de venta.</p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/5492233456733?text=Hola! Me interesa ser revendedor de Distribuidora León" class="cta-button secondary" target="_blank">Quiero ser Revendedor</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Distribuidora León</h3>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://wa.me/5492233456733" target="_blank" aria-label="WhatsApp">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/distribuidor.leon/" target="_blank" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>© 2025 Distribuidora León - Mar del Plata, Argentina</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
