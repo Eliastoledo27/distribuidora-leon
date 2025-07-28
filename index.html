@@ -960,6 +960,359 @@
                 animation: none !important;
             }
         }
+        
+        /* Critical Pricing Table Styles - Diseño Responsive Mejorado */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            min-width: 300px;
+            max-width: 100%;
+            table-layout: auto;
+        }
+        
+        .pricing-table th {
+            background: var(--gradiente-dorado);
+            color: var(--negro-profundo);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            white-space: nowrap;
+            min-width: 120px;
+        }
+        
+        .pricing-table td {
+            padding: 1.2rem 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+            word-wrap: break-word;
+            max-width: 200px;
+            vertical-align: middle;
+        }
+        
+        .pricing-table tr:hover {
+            background: rgba(212, 175, 55, 0.1);
+            transition: background 0.3s ease;
+        }
+        
+        .pricing-table td:last-child {
+            color: #4CAF50;
+            font-weight: 700;
+            font-size: 1.1rem;
+            white-space: nowrap;
+        }
+        
+        .pricing-summary {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            backdrop-filter: blur(10px);
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .pricing-summary h3 {
+            font-size: 1.8rem;
+            color: var(--dorado-metalico);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .pricing-summary ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            width: 100%;
+        }
+        
+        .pricing-summary li {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid var(--dorado-metalico);
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            word-wrap: break-word;
+        }
+        
+        /* Responsive Design Mejorado para Tabla de Comparativa */
+        @media (max-width: 1400px) {
+            .pricing-table {
+                font-size: 0.95rem;
+            }
+            
+            .pricing-table th {
+                padding: 1.2rem 0.8rem;
+                font-size: 1rem;
+            }
+            
+            .pricing-table td {
+                padding: 1rem 0.6rem;
+                font-size: 0.9rem;
+            }
+            
+            .pricing-summary ul {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .pricing-table {
+                font-size: 0.9rem;
+                min-width: 280px;
+            }
+            
+            .pricing-table th {
+                padding: 1rem 0.6rem;
+                font-size: 0.95rem;
+                min-width: 100px;
+            }
+            
+            .pricing-table td {
+                padding: 0.8rem 0.5rem;
+                font-size: 0.85rem;
+                max-width: 150px;
+            }
+            
+            .pricing-summary ul {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 0.8rem;
+            }
+            
+            .pricing-summary li {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .pricing-table {
+                font-size: 0.85rem;
+                min-width: 260px;
+            }
+            
+            .pricing-table th {
+                padding: 0.8rem 0.5rem;
+                font-size: 0.9rem;
+                min-width: 90px;
+            }
+            
+            .pricing-table td {
+                padding: 0.7rem 0.4rem;
+                font-size: 0.8rem;
+                max-width: 130px;
+            }
+            
+            .pricing-summary ul {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 0.7rem;
+            }
+            
+            .pricing-summary li {
+                font-size: 0.95rem;
+                padding: 0.7rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-table {
+                font-size: 0.8rem;
+                min-width: 240px;
+                overflow-x: auto;
+                display: block;
+                white-space: nowrap;
+            }
+            
+            .pricing-table th {
+                padding: 0.7rem 0.4rem;
+                font-size: 0.85rem;
+                min-width: 80px;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+            
+            .pricing-table td {
+                padding: 0.6rem 0.3rem;
+                font-size: 0.75rem;
+                max-width: 110px;
+            }
+            
+            .pricing-summary {
+                padding: 1.5rem;
+            }
+            
+            .pricing-summary h3 {
+                font-size: 1.5rem;
+            }
+            
+            .pricing-summary ul {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+            
+            .pricing-summary li {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .pricing-table {
+                font-size: 0.75rem;
+                min-width: 220px;
+            }
+            
+            .pricing-table th {
+                padding: 0.6rem 0.3rem;
+                font-size: 0.8rem;
+                min-width: 70px;
+            }
+            
+            .pricing-table td {
+                padding: 0.5rem 0.25rem;
+                font-size: 0.7rem;
+                max-width: 100px;
+            }
+            
+            .pricing-summary {
+                padding: 1.2rem;
+            }
+            
+            .pricing-summary h3 {
+                font-size: 1.3rem;
+            }
+            
+            .pricing-summary li {
+                font-size: 0.85rem;
+                padding: 0.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .pricing-table {
+                font-size: 0.7rem;
+                min-width: 200px;
+                border-radius: 10px;
+            }
+            
+            .pricing-table th {
+                padding: 0.5rem 0.25rem;
+                font-size: 0.75rem;
+                min-width: 60px;
+            }
+            
+            .pricing-table td {
+                padding: 0.4rem 0.2rem;
+                font-size: 0.65rem;
+                max-width: 90px;
+            }
+            
+            .pricing-table td:last-child {
+                font-size: 0.75rem;
+            }
+            
+            .pricing-summary {
+                padding: 1rem;
+                border-radius: 15px;
+            }
+            
+            .pricing-summary h3 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .pricing-summary li {
+                font-size: 0.8rem;
+                padding: 0.4rem;
+                border-radius: 8px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .pricing-table {
+                font-size: 0.65rem;
+                min-width: 180px;
+            }
+            
+            .pricing-table th {
+                padding: 0.4rem 0.2rem;
+                font-size: 0.7rem;
+                min-width: 55px;
+            }
+            
+            .pricing-table td {
+                padding: 0.35rem 0.15rem;
+                font-size: 0.6rem;
+                max-width: 80px;
+            }
+            
+            .pricing-table td:last-child {
+                font-size: 0.7rem;
+            }
+            
+            .pricing-summary {
+                padding: 0.8rem;
+            }
+            
+            .pricing-summary h3 {
+                font-size: 1.1rem;
+            }
+            
+            .pricing-summary li {
+                font-size: 0.75rem;
+                padding: 0.35rem;
+            }
+        }
+        
+        /* Orientación Landscape para Tablets */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .pricing-table {
+                font-size: 0.75rem;
+                min-width: 260px;
+            }
+            
+            .pricing-table th {
+                padding: 0.6rem 0.4rem;
+                font-size: 0.8rem;
+                min-width: 85px;
+            }
+            
+            .pricing-table td {
+                padding: 0.5rem 0.3rem;
+                font-size: 0.7rem;
+                max-width: 120px;
+            }
+            
+            .pricing-summary ul {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+        
+        /* Dispositivos Touch */
+        @media (hover: none) and (pointer: coarse) {
+            .pricing-table tr:hover {
+                background: rgba(212, 175, 55, 0.05);
+            }
+            
+            .pricing-table th,
+            .pricing-table td {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     </style>
     
     <!-- Non-Critical CSS -->
