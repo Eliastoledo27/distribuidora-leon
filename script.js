@@ -1,17 +1,42 @@
-// Variables globales
-let currentSection = 0;
-const sections = ['hero', 'products', 'pricing', 'about', 'revendedores', 'footer'];
-
 // Elementos del DOM
 const scrollProgressBar = document.querySelector('.scroll-progress-bar');
 const sectionNavBtns = document.querySelectorAll('.section-nav-btn');
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
-const mobileMenuClose = document.querySelector('.mobile-menu-close');
-const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+const sections = ['hero', 'productos', 'pricing', 'about', 'revendedores', 'footer'];
 
-// Scroll Progress
+// Forzar visibilidad inmediata de todas las secciones
+document.addEventListener('DOMContentLoaded', function() {
+    // Mostrar todas las secciones inmediatamente
+    const allSections = document.querySelectorAll('section');
+    allSections.forEach(section => {
+        section.style.opacity = '1';
+        section.style.visibility = 'visible';
+        section.style.display = 'block';
+        section.style.transform = 'none';
+        section.style.animation = 'none';
+    });
+    
+    // Mostrar específicamente la sección de productos
+    const productsSection = document.querySelector('.products-section');
+    if (productsSection) {
+        productsSection.style.opacity = '1';
+        productsSection.style.visibility = 'visible';
+        productsSection.style.display = 'block';
+        productsSection.style.transform = 'none';
+        productsSection.style.animation = 'none';
+    }
+    
+    // Mostrar todos los elementos de productos
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        card.style.opacity = '1';
+        card.style.visibility = 'visible';
+        card.style.display = 'block';
+        card.style.transform = 'none';
+        card.style.animation = 'none';
+    });
+});
+
+// Actualizar barra de progreso
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset;
     const docHeight = document.body.offsetHeight - window.innerHeight;
@@ -19,33 +44,16 @@ window.addEventListener('scroll', () => {
     scrollProgressBar.style.width = scrollPercent + '%';
 });
 
-// Navegación por secciones (manual)
-sectionNavBtns.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        const targetSection = document.getElementById(sections[index]);
-        if (targetSection) {
-            targetSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Actualizar botón activo basado en scroll manual
+// Navegación por secciones
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY + window.innerHeight / 2;
-    
     sections.forEach((sectionId, index) => {
         const section = document.getElementById(sectionId);
         if (section) {
             const sectionTop = section.offsetTop;
             const sectionBottom = sectionTop + section.offsetHeight;
-            
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                // Remover clase activa de todos los botones
                 sectionNavBtns.forEach(btn => btn.classList.remove('active'));
-                // Agregar clase activa al botón correspondiente
                 if (sectionNavBtns[index]) {
                     sectionNavBtns[index].classList.add('active');
                 }
@@ -54,64 +62,12 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Navegación móvil
-mobileMenuToggle.addEventListener('click', () => {
-    mobileMenu.classList.add('active');
-    mobileMenuOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-mobileMenuClose.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    mobileMenuOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-});
-
-mobileMenuOverlay.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    mobileMenuOverlay.classList.remove('active');
-    document.body.style.overflow = '';
-});
-
-// Enlaces del menú móvil
-mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
+// Botones de navegación lateral
+sectionNavBtns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        const targetSection = document.getElementById(sections[index]);
         if (targetSection) {
-            targetSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-        
-        // Cerrar menú móvil
-        mobileMenu.classList.remove('active');
-        mobileMenuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-});
-
-// Intersection Observer para animaciones
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
         }
     });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-});
-
-// Observar elementos con animaciones
-document.querySelectorAll('.hidden, .section-reveal-left, .section-reveal-right').forEach(el => {
-    observer.observe(el);
-});
-
-// Inicializar primera sección como activa
-if (sectionNavBtns.length > 0) {
-    sectionNavBtns[0].classList.add('active');
-} 
+}); 

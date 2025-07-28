@@ -5,11 +5,966 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidora León - Perfumes Árabes en Mar del Plata</title>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700&display=swap"></noscript>
+    
+    <!-- Preload Critical Images -->
+    <link rel="preload" href="./PERFUMES/PerfumeLattafaAsad-EauDeParfum-100ml_Hombre_2a917647-6766-4a2a-8fd8-27e50c8bcbaf-Photoroom.png" as="image">
+    <link rel="preload" href="./PERFUMES/perfumesco_coleccion.webp" as="image">
+    
+    <!-- Preload Critical Product Images -->
+    <link rel="preload" href="./PERFUMES/Rasasi Daarej-Photoroom.png" as="image">
+    <link rel="preload" href="./PERFUMES/Afnan 9PM-Photoroom.png" as="image">
+    <link rel="preload" href="./PERFUMES/detou-noir-422c774714399d641d17140920119047-1024-1024-Photoroom.png" as="image">
+    <link rel="preload" href="./PERFUMES/Lattafa Yara Rosa-Photoroom.png" as="image">
+    <link rel="preload" href="./PERFUMES/Lattafa Khamrah EDP-Photoroom.png" as="image">
+    <link rel="preload" href="./PERFUMES/Lattafa Khamrah QAHWA.png" as="image">
+    <link rel="preload" href="./PERFUMES/Club de Nuit Intense Man.png" as="image">
+    <link rel="preload" href="./PERFUMES/Bharara King EDP.png" as="image">
+    <link rel="preload" href="./PERFUMES/Armaf Odyssey Mandarin Sky.png" as="image">
+    <link rel="preload" href="./PERFUMES/Al Haramain Amber Oud Gold.png" as="image">
+    
+    <!-- Critical CSS Inline -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        :root {
+            --dorado-metalico: #D4AF37;
+            --dorado-claro: #F4E4BC;
+            --negro-profundo: #0A0A0A;
+            --gris-oscuro: #1A1A1A;
+            --gris-claro: #333333;
+            --blanco: #FFFFFF;
+            --gradiente-dorado: linear-gradient(135deg, #D4AF37 0%, #F4E4BC 50%, #D4AF37 100%);
+            --gradiente-negro: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+            --sombra-dorada: 0 0 30px rgba(212, 175, 55, 0.3);
+            --sombra-negra: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--negro-profundo);
+            color: var(--blanco);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Critical Hero Styles */
+        .hero-section {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--gradiente-negro);
+            padding: 2rem 0;
+            margin-top: 0 !important; /* Sin margen superior */
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-text {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .brand-logo {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--gradiente-dorado);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-shadow: var(--sombra-dorada);
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: var(--gradiente-dorado);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            text-align: center;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--dorado-claro);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--gradiente-dorado);
+            color: var(--negro-profundo);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--sombra-dorada);
+            border: 2px solid transparent;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+            color: var(--negro-profundo);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--dorado-metalico);
+            border: 2px solid var(--dorado-metalico);
+            box-shadow: none;
+        }
+        
+        .cta-button.secondary:hover {
+            background: var(--dorado-metalico);
+            color: var(--negro-profundo);
+            box-shadow: var(--sombra-dorada);
+        }
+        
+        .hero-product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+        
+        .product-showcase {
+            position: relative;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .product-image {
+            width: 280px;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+            border-radius: 20px;
+            background: transparent;
+        }
+        
+        .product-info {
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .product-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dorado-metalico);
+            margin-bottom: 0.5rem;
+            font-family: 'Cinzel Decorative', serif;
+            text-align: center;
+        }
+        
+        .product-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--blanco);
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        
+        .product-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        /* Critical Navigation */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+        
+        .scroll-progress-bar {
+            height: 100%;
+            background: var(--gradiente-dorado);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .section-nav {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .section-nav-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .section-nav-btn.active {
+            background: var(--dorado-metalico);
+            box-shadow: var(--sombra-dorada);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            z-index: 1001;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            height: 60px; /* Altura fija del menú móvil */
+        }
+        
+        .mobile-logo {
+            color: var(--dorado-metalico);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .mobile-menu-toggle {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            background: none;
+            border: none;
+            color: var(--blanco);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Responsive Critical */
+        @media (max-width: 768px) {
+            .hero-section {
+                margin-top: 0 !important; /* Sin margen superior en móviles */
+                padding-top: 2rem;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+                padding: 0 1rem;
+            }
+            
+            .brand-logo {
+                font-size: 2.5rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .product-image {
+                width: 220px;
+            }
+            
+            .section-nav {
+                display: none;
+            }
+            
+            .mobile-nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section {
+                margin-top: 0 !important; /* Sin margen superior en móviles pequeños */
+                padding-top: 1.5rem;
+            }
+            
+            .hero-container {
+                padding: 0 0.5rem;
+            }
+            
+            .brand-logo {
+                font-size: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .product-image {
+                width: 180px;
+            }
+        }
+        
+        /* Asegurar que el menú móvil no interfiera en desktop */
+        @media (min-width: 769px) {
+            .mobile-nav {
+                display: none !important;
+            }
+            
+            .hero-section {
+                margin-top: 0;
+            }
+        }
+        
+        /* Critical Products Section Styles - Diseño Profesional Perfeccionado */
+        .products-section {
+            padding: 6rem 0;
+            background: var(--gradiente-negro);
+            position: relative;
+            overflow: visible;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
+            animation: none !important;
+        }
+        
+        .products-section .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header de la Sección */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--gradiente-dorado);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Cinzel Decorative', serif;
+            margin-bottom: 1rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        /* Producto Destacado */
+        .featured-product {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 30px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .featured-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 450px;
+            width: 100%;
+        }
+        
+        .featured-image img {
+            width: 320px;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+            transition: all 0.4s ease;
+            opacity: 1 !important;
+            visibility: visible !important;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gradiente-dorado);
+            color: var(--negro-profundo);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .featured-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .featured-info h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dorado-metalico);
+            font-family: 'Cinzel Decorative', serif;
+            margin: 0;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .product-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .spec {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--dorado-metalico);
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--blanco);
+            text-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .original-price {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: line-through;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .discount {
+            background: #ff4757;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .featured-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gradiente-dorado);
+            color: var(--negro-profundo);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: var(--sombra-dorada);
+            max-width: fit-content;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .featured-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
+        }
+        
+        /* Grid de Productos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .product-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(15px);
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .product-image {
+            position: relative;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            overflow: hidden;
+            opacity: 1 !important;
+            visibility: visible !important;
+            padding: 1.5rem;
+            width: 100%;
+        }
+        
+        .product-image img {
+            width: 200px;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+            opacity: 1 !important;
+            visibility: visible !important;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .product-item:hover .product-image img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 12px 25px rgba(212, 175, 55, 0.2));
+        }
+        
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .product-item:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .quick-view {
+            background: var(--gradiente-dorado);
+            color: var(--negro-profundo);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .quick-view:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .product-details {
+            padding: 1.5rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-details h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dorado-metalico);
+            margin-bottom: 1rem;
+            font-family: 'Cinzel Decorative', serif;
+            opacity: 1 !important;
+            visibility: visible !important;
+            text-align: center;
+        }
+        
+        .product-notes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+            justify-content: center;
+        }
+        
+        .product-notes span {
+            background: rgba(212, 175, 55, 0.08);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            opacity: 1 !important;
+            visibility: visible !important;
+            justify-content: center;
+        }
+        
+        .current-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--blanco);
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .original-price {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: line-through;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .product-cta {
+            display: block;
+            width: 100%;
+            background: var(--gradiente-dorado);
+            color: var(--negro-profundo);
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--sombra-dorada);
+            opacity: 1 !important;
+            visibility: visible !important;
+            margin-top: auto;
+        }
+        
+        .product-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .featured-product {
+                gap: 3rem;
+                padding: 2.5rem;
+            }
+            
+            .featured-image {
+                height: 400px;
+            }
+            
+            .featured-image img {
+                width: 280px;
+                max-height: 350px;
+            }
+            
+            .featured-info h3 {
+                font-size: 2.2rem;
+            }
+            
+            .price {
+                font-size: 2.2rem;
+            }
+            
+            .product-image {
+                height: 300px;
+            }
+            
+            .product-image img {
+                width: 180px;
+                max-height: 260px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .products-section {
+                padding: 4rem 0;
+            }
+            
+            .section-header h2 {
+                font-size: 2.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .featured-product {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+                text-align: center;
+            }
+            
+            .featured-image {
+                height: 350px;
+            }
+            
+            .featured-image img {
+                width: 240px;
+                max-height: 300px;
+            }
+            
+            .featured-info h3 {
+                font-size: 2rem;
+            }
+            
+            .product-specs {
+                justify-content: center;
+            }
+            
+            .price-container {
+                justify-content: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .product-item {
+                max-width: 450px;
+                margin: 0 auto;
+            }
+            
+            .product-image {
+                height: 280px;
+            }
+            
+            .product-image img {
+                width: 160px;
+                max-height: 240px;
+            }
+            
+            .product-details h4 {
+                font-size: 1.2rem;
+            }
+            
+            .current-price {
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .products-section .container {
+                padding: 0 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .featured-product {
+                padding: 1.5rem;
+            }
+            
+            .featured-image {
+                height: 300px;
+            }
+            
+            .featured-image img {
+                width: 200px;
+                max-height: 250px;
+            }
+            
+            .featured-info h3 {
+                font-size: 1.8rem;
+            }
+            
+            .price {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                gap: 1.5rem;
+            }
+            
+            .product-image {
+                height: 240px;
+            }
+            
+            .product-image img {
+                width: 140px;
+                max-height: 200px;
+            }
+            
+            .product-details {
+                padding: 1.2rem;
+            }
+            
+            .product-details h4 {
+                font-size: 1.1rem;
+            }
+            
+            .product-notes span {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.5rem;
+            }
+            
+            .current-price {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .products-section,
+            .products-section *,
+            .product-card,
+            .product-card * {
+                opacity: 1 !important;
+                visibility: visible !important;
+                display: block !important;
+                transform: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+    
+    <!-- Non-Critical CSS -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
     <!-- Indicador de Progreso -->
@@ -26,28 +981,6 @@
         <div class="section-nav-btn" data-section="revendedores"></div>
         <div class="section-nav-btn" data-section="footer"></div>
     </div>
-
-    <!-- Navegación Móvil -->
-    <nav class="mobile-nav">
-        <a href="#" class="mobile-logo">Distribuidora León</a>
-        <button class="mobile-menu-toggle">☰</button>
-    </nav>
-
-    <!-- Menú Móvil -->
-    <div class="mobile-menu">
-        <button class="mobile-menu-close">×</button>
-        <ul class="mobile-menu-links">
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#pricing">Precios</a></li>
-            <li><a href="#about">Sobre Nosotros</a></li>
-            <li><a href="#revendedores">Revendedores</a></li>
-            <li><a href="https://wa.me/5492233456733" target="_blank">Contacto</a></li>
-        </ul>
-    </div>
-
-    <!-- Overlay del Menú Móvil -->
-    <div class="mobile-menu-overlay"></div>
 
     <!-- Hero Section Profesional -->
     <header class="hero-section" id="hero">
@@ -100,98 +1033,244 @@
         </div>
     </header>
 
-    <!-- Sección de Productos -->
-    <section id="productos" class="products-section hidden">
-        <div class="section-reveal-left">
-            <div class="container">
+    <!-- Sección de Productos - Diseño Profesional Perfeccionado -->
+    <section id="productos" class="products-section">
+        <div class="container">
+            <div class="section-header">
                 <h2>Nuestras Joyas Más Deseadas</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <img src="./PERFUMES/PerfumeLattafaAsad-EauDeParfum-100ml_Hombre_2a917647-6766-4a2a-8fd8-27e50c8bcbaf-Photoroom.png" alt="Lattafa Asad">
+                <p class="section-subtitle">Descubre la colección más exclusiva de perfumes árabes en Mar del Plata</p>
+            </div>
+            
+            <div class="products-showcase">
+                <!-- Producto Destacado -->
+                <div class="featured-product">
+                    <div class="featured-image">
+                        <img src="./PERFUMES/PerfumeLattafaAsad-EauDeParfum-100ml_Hombre_2a917647-6766-4a2a-8fd8-27e50c8bcbaf-Photoroom.png" alt="Lattafa Asad - Producto Destacado">
+                        <div class="featured-badge">Más Vendido</div>
+                    </div>
+                    <div class="featured-info">
                         <h3>Lattafa Asad</h3>
-                        <p>Notas de bergamota, cardamomo, lavanda, vainilla y ámbar</p>
-                        <p class="price">$37.990</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Asad por $37.990" target="_blank">Consultar</a>
+                        <div class="product-specs">
+                            <span class="spec">Bergamota</span>
+                            <span class="spec">Cardamomo</span>
+                            <span class="spec">Lavanda</span>
+                            <span class="spec">Vainilla</span>
+                            <span class="spec">Ámbar</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="price">$37.990</span>
+                            <span class="original-price">$61.625</span>
+                            <span class="discount">-38%</span>
+                        </div>
+                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Asad por $37.990" class="featured-cta" target="_blank">
+                            <span>Comprar Ahora</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Grid de Productos -->
+                <div class="products-grid">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Rasasi Daarej-Photoroom.png" alt="Rasasi Daarej">
+                        </div>
+                        <div class="product-details">
+                            <h4>Rasasi Daarej</h4>
+                            <div class="product-notes">
+                                <span>Rosa</span>
+                                <span>Jazmín</span>
+                                <span>Sándalo</span>
+                                <span>Almizcle</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$42.500</span>
+                                <span class="original-price">$68.000</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Rasasi Daarej por $42.500" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Rasasi Daarej-Photoroom.png" alt="Rasasi Daarej">
-                        <h3>Rasasi Daarej</h3>
-                        <p>Notas de rosa, jazmín, sándalo y almizcle</p>
-                        <p class="price">$42.500</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Rasasi Daarej por $42.500" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Afnan 9PM-Photoroom.png" alt="Afnan 9PM">
+                        </div>
+                        <div class="product-details">
+                            <h4>Afnan 9PM</h4>
+                            <div class="product-notes">
+                                <span>Bergamota</span>
+                                <span>Pimienta</span>
+                                <span>Vainilla</span>
+                                <span>Ámbar</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$38.750</span>
+                                <span class="original-price">$79.900</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Afnan 9PM por $38.750" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Afnan 9PM-Photoroom.png" alt="Afnan 9PM">
-                        <h3>Afnan 9PM</h3>
-                        <p>Notas de bergamota, pimienta, vainilla y ámbar</p>
-                        <p class="price">$38.750</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Afnan 9PM por $38.750" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/detou-noir-422c774714399d641d17140920119047-1024-1024-Photoroom.png" alt="Detour Noir">
+                        </div>
+                        <div class="product-details">
+                            <h4>Detour Noir</h4>
+                            <div class="product-notes">
+                                <span>Bergamota</span>
+                                <span>Lavanda</span>
+                                <span>Vainilla</span>
+                                <span>Ámbar</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$35.200</span>
+                                <span class="original-price">$63.750</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Detour Noir por $35.200" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/detou-noir-422c774714399d641d17140920119047-1024-1024-Photoroom.png" alt="Detour Noir">
-                        <h3>Detour Noir</h3>
-                        <p>Notas de bergamota, lavanda, vainilla y ámbar</p>
-                        <p class="price">$35.200</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Detour Noir por $35.200" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Lattafa Yara Rosa-Photoroom.png" alt="Lattafa Yara Rosa">
+                        </div>
+                        <div class="product-details">
+                            <h4>Lattafa Yara Rosa</h4>
+                            <div class="product-notes">
+                                <span>Floral</span>
+                                <span>Frutal</span>
+                                <span>Rosa</span>
+                                <span>Dulce</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$35.990</span>
+                                <span class="original-price">$55.250</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Yara Rosa por $35.990" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Lattafa Yara Rosa-Photoroom.png" alt="Lattafa Yara Rosa">
-                        <h3>Lattafa Yara Rosa</h3>
-                        <p>Fragancia femenina con notas florales y frutales</p>
-                        <p class="price">$35.990</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Yara Rosa por $35.990" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Lattafa Khamrah EDP-Photoroom.png" alt="Lattafa Khamrah EDP">
+                        </div>
+                        <div class="product-details">
+                            <h4>Lattafa Khamrah EDP</h4>
+                            <div class="product-notes">
+                                <span>Oriental</span>
+                                <span>Especiado</span>
+                                <span>Unisex</span>
+                                <span>Lujoso</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$39.990</span>
+                                <span class="original-price">$93.500</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Khamrah EDP por $39.990" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Lattafa Khamrah EDP-Photoroom.png" alt="Lattafa Khamrah EDP">
-                        <h3>Lattafa Khamrah EDP</h3>
-                        <p>Fragancia unisex con notas orientales y especiadas</p>
-                        <p class="price">$39.990</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Khamrah EDP por $39.990" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Lattafa Khamrah QAHWA.png" alt="Lattafa Khamrah QAHWA">
+                        </div>
+                        <div class="product-details">
+                            <h4>Lattafa Khamrah QAHWA</h4>
+                            <div class="product-notes">
+                                <span>Café</span>
+                                <span>Especias</span>
+                                <span>Oriental</span>
+                                <span>Intenso</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$38.990</span>
+                                <span class="original-price">$80.750</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Khamrah QAHWA por $38.990" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Lattafa Khamrah QAHWA.png" alt="Lattafa Khamrah QAHWA">
-                        <h3>Lattafa Khamrah QAHWA</h3>
-                        <p>Variante con notas de café y especias orientales</p>
-                        <p class="price">$38.990</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Lattafa Khamrah QAHWA por $38.990" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Club de Nuit Intense Man.png" alt="Club de Nuit Intense Man">
+                        </div>
+                        <div class="product-details">
+                            <h4>Club de Nuit Intense Man</h4>
+                            <div class="product-notes">
+                                <span>Cítrico</span>
+                                <span>Amaderado</span>
+                                <span>Masculino</span>
+                                <span>Intenso</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$45.690</span>
+                                <span class="original-price">$76.500</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Club de Nuit Intense Man por $45.690" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Club de Nuit Intense Man.png" alt="Club de Nuit Intense Man">
-                        <h3>Club de Nuit Intense Man</h3>
-                        <p>Fragancia masculina con notas cítricas y amaderadas</p>
-                        <p class="price">$45.690</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Club de Nuit Intense Man por $45.690" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Bharara King EDP.png" alt="Bharara King EDP">
+                        </div>
+                        <div class="product-details">
+                            <h4>Bharara King EDP</h4>
+                            <div class="product-notes">
+                                <span>Premium</span>
+                                <span>Real</span>
+                                <span>Masculino</span>
+                                <span>Exclusivo</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$86.990</span>
+                                <span class="original-price">$204.850</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Bharara King EDP por $86.990" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Bharara King EDP.png" alt="Bharara King EDP">
-                        <h3>Bharara King EDP</h3>
-                        <p>Fragancia masculina premium con notas reales</p>
-                        <p class="price">$86.990</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Bharara King EDP por $86.990" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Armaf Odyssey Mandarin Sky.png" alt="Armaf Odyssey Mandarin Sky">
+                        </div>
+                        <div class="product-details">
+                            <h4>Armaf Odyssey Mandarin Sky</h4>
+                            <div class="product-notes">
+                                <span>Fresco</span>
+                                <span>Cítrico</span>
+                                <span>Floral</span>
+                                <span>Ligero</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$54.990</span>
+                                <span class="original-price">$89.900</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Armaf Odyssey Mandarin Sky por $54.990" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                     
-                    <div class="product-card">
-                        <img src="./PERFUMES/Armaf Odyssey Mandarin Sky.png" alt="Armaf Odyssey Mandarin Sky">
-                        <h3>Armaf Odyssey Mandarin Sky</h3>
-                        <p>Fragancia fresca con notas cítricas y florales</p>
-                        <p class="price">$54.990</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Armaf Odyssey Mandarin Sky por $54.990" target="_blank">Consultar</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <img src="./PERFUMES/Al Haramain Amber Oud Gold.png" alt="Al Haramain Amber Oud Gold">
-                        <h3>Al Haramain Amber Oud Gold</h3>
-                        <p>Fragancia premium con ámbar y oud auténtico</p>
-                        <p class="price">$84.990</p>
-                        <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Al Haramain Amber Oud Gold por $84.990" target="_blank">Consultar</a>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="./PERFUMES/Al Haramain Amber Oud Gold.png" alt="Al Haramain Amber Oud Gold">
+                        </div>
+                        <div class="product-details">
+                            <h4>Al Haramain Amber Oud Gold</h4>
+                            <div class="product-notes">
+                                <span>Ámbar</span>
+                                <span>Oud</span>
+                                <span>Premium</span>
+                                <span>Auténtico</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$84.990</span>
+                                <span class="original-price">$151.300</span>
+                            </div>
+                            <a href="https://wa.me/5492233456733?text=Hola! Me interesa el Al Haramain Amber Oud Gold por $84.990" class="product-cta" target="_blank">Consultar</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -367,6 +1446,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript Optimizado -->
+    <script src="script.js" defer></script>
 </body>
 </html> 
