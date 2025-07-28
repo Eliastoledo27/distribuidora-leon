@@ -961,7 +961,7 @@
             }
         }
         
-        /* Critical Pricing Table Styles - Diseño Responsive Mejorado */
+        /* Critical Pricing Table Styles - Diseño Responsive Avanzado */
         .pricing-table {
             width: 100%;
             border-collapse: collapse;
@@ -1045,7 +1045,7 @@
             word-wrap: break-word;
         }
         
-        /* Responsive Design Mejorado para Tabla de Comparativa */
+        /* Responsive Design Avanzado para Tabla de Comparativa */
         @media (max-width: 1400px) {
             .pricing-table {
                 font-size: 0.95rem;
@@ -1124,29 +1124,61 @@
             }
         }
         
+        /* Técnica Avanzada de Responsive Tables - Basada en CSS-Tricks */
         @media (max-width: 768px) {
-            .pricing-table {
-                font-size: 0.8rem;
-                min-width: 240px;
-                overflow-x: auto;
-                display: block;
-                white-space: nowrap;
+            /* Force table to not be like tables anymore */
+            .pricing-table, 
+            .pricing-table thead, 
+            .pricing-table tbody, 
+            .pricing-table th, 
+            .pricing-table td, 
+            .pricing-table tr { 
+                display: block; 
             }
             
-            .pricing-table th {
-                padding: 0.7rem 0.4rem;
+            /* Hide table headers (but not display: none;, for accessibility) */
+            .pricing-table thead tr { 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            
+            .pricing-table tr { 
+                border: 1px solid rgba(212, 175, 55, 0.2);
+                margin-bottom: 1rem;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.03);
+                padding: 1rem;
+            }
+            
+            .pricing-table td { 
+                /* Behave like a "row" */
+                border: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+                position: relative;
+                padding-left: 50%; 
+                padding-top: 0.8rem;
+                padding-bottom: 0.8rem;
                 font-size: 0.85rem;
-                min-width: 80px;
-                position: sticky;
-                top: 0;
-                z-index: 10;
             }
             
-            .pricing-table td {
-                padding: 0.6rem 0.3rem;
-                font-size: 0.75rem;
-                max-width: 110px;
+            .pricing-table td:before { 
+                /* Now like a table header */
+                position: absolute;
+                /* Top/left values mimic padding */
+                top: 0.8rem;
+                left: 0.8rem;
+                width: 45%; 
+                padding-right: 10px; 
+                white-space: nowrap;
+                font-weight: 700;
+                color: var(--dorado-metalico);
             }
+            
+            /* Label the data */
+            .pricing-table td:nth-of-type(1):before { content: "Perfume:"; }
+            .pricing-table td:nth-of-type(2):before { content: "Precio en MDP:"; }
+            .pricing-table td:nth-of-type(3):before { content: "Precio Esencia de Vida:"; }
             
             .pricing-summary {
                 padding: 1.5rem;
@@ -1168,21 +1200,14 @@
         }
         
         @media (max-width: 600px) {
-            .pricing-table {
-                font-size: 0.75rem;
-                min-width: 220px;
-            }
-            
-            .pricing-table th {
-                padding: 0.6rem 0.3rem;
-                font-size: 0.8rem;
-                min-width: 70px;
-            }
-            
             .pricing-table td {
-                padding: 0.5rem 0.25rem;
-                font-size: 0.7rem;
-                max-width: 100px;
+                padding-left: 45%;
+                font-size: 0.8rem;
+            }
+            
+            .pricing-table td:before {
+                width: 40%;
+                font-size: 0.75rem;
             }
             
             .pricing-summary {
@@ -1200,26 +1225,23 @@
         }
         
         @media (max-width: 480px) {
-            .pricing-table {
-                font-size: 0.7rem;
-                min-width: 200px;
-                border-radius: 10px;
-            }
-            
-            .pricing-table th {
-                padding: 0.5rem 0.25rem;
-                font-size: 0.75rem;
-                min-width: 60px;
+            .pricing-table tr {
+                padding: 0.8rem;
+                margin-bottom: 0.8rem;
             }
             
             .pricing-table td {
-                padding: 0.4rem 0.2rem;
-                font-size: 0.65rem;
-                max-width: 90px;
+                padding-left: 40%;
+                font-size: 0.75rem;
+                padding-top: 0.6rem;
+                padding-bottom: 0.6rem;
             }
             
-            .pricing-table td:last-child {
-                font-size: 0.75rem;
+            .pricing-table td:before {
+                width: 35%;
+                font-size: 0.7rem;
+                top: 0.6rem;
+                left: 0.6rem;
             }
             
             .pricing-summary {
@@ -1240,25 +1262,23 @@
         }
         
         @media (max-width: 360px) {
-            .pricing-table {
-                font-size: 0.65rem;
-                min-width: 180px;
-            }
-            
-            .pricing-table th {
-                padding: 0.4rem 0.2rem;
-                font-size: 0.7rem;
-                min-width: 55px;
+            .pricing-table tr {
+                padding: 0.6rem;
+                margin-bottom: 0.6rem;
             }
             
             .pricing-table td {
-                padding: 0.35rem 0.15rem;
-                font-size: 0.6rem;
-                max-width: 80px;
+                padding-left: 35%;
+                font-size: 0.7rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
             }
             
-            .pricing-table td:last-child {
-                font-size: 0.7rem;
+            .pricing-table td:before {
+                width: 30%;
+                font-size: 0.65rem;
+                top: 0.5rem;
+                left: 0.5rem;
             }
             
             .pricing-summary {
